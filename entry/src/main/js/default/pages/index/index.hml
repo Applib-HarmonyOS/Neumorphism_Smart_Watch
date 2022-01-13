@@ -1,0 +1,76 @@
+<div class="body">
+    <div class="container">
+        <div class="header">
+            <div class="step_counter">
+                <image src="common/images/step_counter.png"></image>
+            </div>
+            <div class="weather">
+                <image if="{{weather =='partly_sunny' }}" src="common/images/partly_sunny.png"></image>
+                <image elif="{{weather =='cloudy' }}" src="common/images/cloudy.png"></image>
+                <image elif="{{weather =='windy' }}" src="common/images/windy.png"></image>
+                <image elif="{{weather =='rainy' }}" src="common/images/rainy.png"></image>
+                <image elif="{{weather =='sleeting' }}" src="common/images/sleeting.png"></image>
+                <image elif="{{weather =='sun_n_rain' }}" src="common/images/sun_n_rain.png"></image>
+                <image elif="{{weather =='sun_n_windy' }}" src="common/images/sun_n_windy.png"></image>
+                <image elif="{{weather =='sunny' }}" src="common/images/sunny.png"></image>
+                <image elif="{{weather =='thunderstorm' }}" src="common/images/thunderstorm.png"></image>
+                <image elif="{{weather =='thunderstorm_n_rain' }}" src="common/images/thunderstorm_n_rain.png"></image>
+                <image else src="common/images/sunny.png"></image>
+            </div>
+            <div class="temperature regular theme_text">
+                <text>{{temperature}}&deg;</text>
+            </div>
+            <div class="notifications">
+                <image src="common/images/notification.png"></image>
+            </div>
+        </div>
+        <div class="clock">
+            <div class="hour">
+                <image src="common/images/{{time_h_0}}.png"></image>
+                <image src="common/images/{{time_h_1}}.png"></image>
+            </div>
+            <div class="other">
+                <div class="minutes">
+                    <image src="common/images/{{time_m_0}}.png"></image>
+                    <image src="common/images/{{time_m_1}}.png"></image>
+                </div>
+                <div class="date bold theme_text">
+                    <text>{{date_w}} {{date_d}}/{{date_m}}</text>
+                </div>
+            </div>
+        </div>
+        <div if="{{notifications}}" class="footer footer_bg">
+            <div class="icon">
+                <image src="common/images/snooze.png"></image>
+            </div>
+            <div class="info semi_bold dark_text">
+                <div class="title">
+                    <text>{{notification_title}}</text>
+                </div>
+                <div class="subject">
+                    <text>{{notification_subject}}</text>
+                </div>
+                <div class="message">
+                    <text>{{notification_message}}</text>
+                </div>
+            </div>
+        </div>
+        <div else class="footer semi_bold dark_text">
+            <div class="activity">
+                <image src="common/images/calories.png"></image>
+                <text>Calories Burning</text>
+            </div>
+            <div class="activity">
+                <image src="common/images/heart_rate.png"></image>
+                <text>Heart Rate</text>
+            </div>
+            <div class="activity">
+                <image src="common/images/sleep_track.png"></image>
+                <text>Sleep Track</text>
+            </div>
+        </div>
+        <div class="arrow" onclick="toggle_notifications">
+            <image src="common/images/arrow.png"></image>
+        </div>
+    </div>
+</div>
