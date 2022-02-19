@@ -13,8 +13,24 @@ export default {
         notification_subject: "UI Design Review",
         notification_message: "Meeting Room 5, FLoor 3, HTIPL.",
     },
-    toggle_notifications: function() {
+    onClickStepCounter: function() {
+        console.log("Step Counter Button Clicked !");
+    },
+    onClickNotifications: function() {
+        console.log("Notifications Button Clicked !");
+    },
+    onClickCalories: function() {
+        console.log("Calories Button Clicked !");
+    },
+    onClickHeartRate: function() {
+        console.log("Heart Rate Button Clicked !");
+    },
+    onClickSleepTrack: function() {
+        console.log("Sleep Track Button Clicked !");
+    },
+    toggleNotifications: function() {
         this.notifications = !this.notifications;
+        console.log("Notifications toggled !");
     },
     onInit(){
         this.time_h_0=this.time_h.toString()[0];

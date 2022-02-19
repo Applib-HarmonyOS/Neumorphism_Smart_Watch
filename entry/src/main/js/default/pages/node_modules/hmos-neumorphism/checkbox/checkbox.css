@@ -1,0 +1,30 @@
+@import '../theme/theme.css';
+
+.neumorph_container{
+    width: 50px;
+    height: 50px;
+    margin:20px;
+}
+
+.neumorph_checkbox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.neumorph_checkbox .checkbox{
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.neumorph_checkbox .checkbox .tick{
+    width: 12px;
+    height: 24px;
+    transform: rotate(45deg);
+}

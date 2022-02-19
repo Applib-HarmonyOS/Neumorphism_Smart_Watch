@@ -42,16 +42,13 @@
 }
 
 .container{
-    width: 400px;
-    height: 400px;
+    width: 320px;
+    height: 340px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url('common/images/bg.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+    border-radius: 50px;
 }
 
 .header{
@@ -60,17 +57,24 @@
     align-items: center;
 }
 
-.header .step_counter, .notifications{
-    width: 100px;
-    height: 100px;
-}
-
-.header .weather, .temperature{
-    height: 75px;
+.header image{
     width: 50px;
+    height: 50px;
 }
 
-.header .weather image{
+.step_counter, .notifications{
+    padding: 10px;
+    width: 60px;
+    height: 75px;
+    border-radius: 50px;
+}
+
+.weather, .temperature{
+    height: 75px;
+    width: 60px;
+}
+
+.weather image{
     width: 25px;
     height: 25px;
     position: absolute;
@@ -78,7 +82,7 @@
     right: 8px;
 }
 
-.header .temperature text{
+.temperature text{
     font-size: 15px;
     position: absolute;
     bottom: 0px;
@@ -90,67 +94,67 @@
     align-items: center;
 }
 
-.clock .hour{
+.hour{
     margin-right: 20px;
 }
 
-.clock .hour image{
+.hour image{
     height: 90px;
     width: 50px;
 }
 
-.clock .other{
+.other{
     display: flex;
     flex-direction: column;
     justify-content: center;
     font-size: 15px;
 }
 
-.clock .other image{
+.other image{
     height: 40px;
     width: 25px;
     margin-bottom: 10px;
 }
 
 .footer{
-    width: 100%;
-    height: 100px;
+    width: 80%;
+    height: 110px;
+    border-radius: 10px;
+    margin: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.footer_bg{
-    background-image: url('common/images/notification_area_bg.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+.footer_icon{
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    border-radius: 50px;
+    padding: 5px;
 }
 
-.footer image{
-    width: 90px;
-    height: 90px;
-}
-
-.footer .info{
+.footer_info{
+    margin-left: 20px;
+    scrollbar-width: 0px;
+    overflow: scroll;
     width: 140px;
     height: 80px;
-    overflow: hidden ;
     display: flex;
     flex-direction: column;
     justify-content: center;
     font-size: 10px;
 }
 
-.footer .title{
+.footer_title{
     font-size: 12px;
 }
 
-.footer .subject{
+.footer_subject{
     margin: 5px 0;
 }
 
-.footer .activity{
+.activity{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -158,18 +162,34 @@
     font-size: 10px;
 }
 
-.footer .activity image{
-    width: 85px;
-    height: 80px;
+.activity image{
+    width: 60px;
+    height: 60px;
+}
+
+.activity_btn{
+    padding: 10px;
+    margin: 10px 15px;
+    width: 60px;
+    border-radius: 50px;
 }
 
 .arrow{
+    margin:10px;
+    padding: 5px 15px;
+    width: 60px;
+    height: 40px;
+    border-radius: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.arrow image{
-    width: 50px;
-    height: 40px;
+@media (device-type: wearable){
+    .header{
+        display: none;
+    }
+    .footer{
+        display: none;
+    }
 }

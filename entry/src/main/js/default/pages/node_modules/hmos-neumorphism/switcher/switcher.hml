@@ -1,0 +1,8 @@
+<div class="neumorph_container" style="width: {{width}}; height: {{height}}; border-radius: {{border}};">
+    <div class="neumorph_innercontainer neumorph_switcher" style="border-radius: {{border}};" onclick="toggleSwitch">
+            <div if="{{color}}" class="left fill" style=" border-radius: {{border}}; background-color: {{color}};" show="{{left}}"></div>
+            <div class="left fill" show="{{left}}" style=" border-radius: {{border}}; " else></div>
+            <div if="{{color}}" class="right fill" style=" border-radius: {{border}}; background-color: {{color}};" show="{{right}}"></div>
+            <div class="right fill" show="{{right}}" style=" border-radius: {{border}}; " else></div>
+    </div>
+</div>

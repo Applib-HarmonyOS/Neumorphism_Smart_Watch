@@ -1,0 +1,8 @@
+<div class="neumorph_container" style="width: {{width}}; height: {{height}}; border-radius: {{border}};">
+    <div class="neumorph_innercontainer neumorph_radio" style="border-radius: {{border}};">
+        <div class="radio" onclick="toggleShow" >
+            <div  if="{{color}}" class="fill" show="{{visible}}" style="border-radius: {{border}}; background-color: {{color}};"></div>
+            <div  class="fill" show="{{visible}}" style="border-radius: {{border}};" else></div>
+        </div>
+    </div>
+</div>

@@ -1,9 +1,26 @@
+<element name='neutheme' src='../node_modules/hmos-neumorphism/theme/theme.hml'></element>
+<element name='neualert' src='../node_modules/hmos-neumorphism/alert/alert.hml'></element>
+<element name='neuavatar' src='../node_modules/hmos-neumorphism/avatar/avatar.hml'></element>
+<element name='neubutton' src='../node_modules/hmos-neumorphism/button/button.hml'></element>
+<element name='neubuttons' src='../node_modules/hmos-neumorphism/buttons/buttons.hml'></element>
+<element name='neucard' src='../node_modules/hmos-neumorphism/card/card.hml'></element>
+<element name='neucheckbox' src='../node_modules/hmos-neumorphism/checkbox/checkbox.hml'></element>
+<element name='neudropdown' src='../node_modules/hmos-neumorphism/dropdown/dropdown.hml'></element>
+<element name='neuform' src='../node_modules/hmos-neumorphism/form/form.hml'></element>
+<element name='neuinput' src='../node_modules/hmos-neumorphism/input/input.hml'></element>
+<element name='neulabel' src='../node_modules/hmos-neumorphism/label/label.hml'></element>
+<element name='neunavbar' src='../node_modules/hmos-neumorphism/navbar/navbar.hml'></element>
+<element name='neupagination' src='../node_modules/hmos-neumorphism/pagination/pagination.hml'></element>
+<element name='neuprogress' src='../node_modules/hmos-neumorphism/progress/progress.hml'></element>
+<element name='neuradio' src='../node_modules/hmos-neumorphism/radio/radio.hml'></element>
+<element name='neuswitcher' src='../node_modules/hmos-neumorphism/switcher/switcher.hml'></element>
+
 <div class="body">
-    <div class="container">
+    <neutheme theme="light_mode" class="container">
         <div class="header">
-            <div class="step_counter">
+            <neubutton class="step_counter" @button-event="onClickStepCounter">
                 <image src="common/images/step_counter.png"></image>
-            </div>
+            </neubutton>
             <div class="weather">
                 <image if="{{weather =='partly_sunny' }}" src="common/images/partly_sunny.png"></image>
                 <image elif="{{weather =='cloudy' }}" src="common/images/cloudy.png"></image>
@@ -20,9 +37,9 @@
             <div class="temperature regular theme_text">
                 <text>{{temperature}}&deg;</text>
             </div>
-            <div class="notifications">
+            <neubutton class="notifications" @button-event="onClickNotifications">
                 <image src="common/images/notification.png"></image>
-            </div>
+            </neubutton>
         </div>
         <div class="clock">
             <div class="hour">
@@ -39,38 +56,44 @@
                 </div>
             </div>
         </div>
-        <div if="{{notifications}}" class="footer footer_bg">
-            <div class="icon">
+        <neucard if="{{notifications}}" class="footer">
+            <neubutton class="footer_icon">
                 <image src="common/images/snooze.png"></image>
-            </div>
-            <div class="info semi_bold dark_text">
-                <div class="title">
+            </neubutton>
+            <div class="footer_info semi_bold dark_text">
+                <div class="footer_title">
                     <text>{{notification_title}}</text>
                 </div>
-                <div class="subject">
+                <div class="footer_subject">
                     <text>{{notification_subject}}</text>
                 </div>
                 <div class="message">
                     <text>{{notification_message}}</text>
                 </div>
             </div>
-        </div>
+        </neucard>
         <div else class="footer semi_bold dark_text">
             <div class="activity">
-                <image src="common/images/calories.png"></image>
+                <neubutton class="activity_btn" @button-event="onClickCalories">
+                    <image src="common/images/calories.png"></image>
+                </neubutton>
                 <text>Calories Burning</text>
             </div>
             <div class="activity">
-                <image src="common/images/heart_rate.png"></image>
+                <neubutton class="activity_btn" @button-event="onClickHeartRate">
+                    <image src="common/images/heart_rate.png"></image>
+                </neubutton>
                 <text>Heart Rate</text>
             </div>
             <div class="activity">
-                <image src="common/images/sleep_track.png"></image>
+                <neubutton class="activity_btn" @button-event="onClickSleepTrack">
+                    <image src="common/images/sleep_track.png"></image>
+                </neubutton>
                 <text>Sleep Track</text>
             </div>
         </div>
-        <div class="arrow" onclick="toggle_notifications">
+        <neubutton class="arrow" @button-event="toggleNotifications">
             <image src="common/images/arrow.png"></image>
-        </div>
-    </div>
+        </neubutton>
+    </neutheme>
 </div>
