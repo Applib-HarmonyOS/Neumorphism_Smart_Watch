@@ -1,0 +1,7 @@
+<div class="neumorph_container" style="width: {{width}}; height: {{height}}; border-radius: {{border}};">
+    <div class="neumorph_innercontainer neumorph_label" style="border-radius: {{border}};">
+        <image if="{{icon}}" class="icon" src="{{icon}}"></image>
+        <text if="{{icon}}" style="margin: 0 40px"> {{text}} </text>
+        <text else> {{text}} </text>
+    </div>
+</div>

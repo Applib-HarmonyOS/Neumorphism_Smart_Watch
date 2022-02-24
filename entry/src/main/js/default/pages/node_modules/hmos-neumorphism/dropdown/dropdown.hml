@@ -1,0 +1,5 @@
+<div class="neumorph_container" style="width: {{width}}; height: {{height}}; border-radius: {{border}};">
+    <div class="neumorph_innercontainer neumorph_dropdown" style="border-radius: {{border}};">
+        <slot></slot>
+    </div>
+</div>

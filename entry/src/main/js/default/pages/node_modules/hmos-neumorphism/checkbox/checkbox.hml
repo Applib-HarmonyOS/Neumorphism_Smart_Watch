@@ -1,0 +1,8 @@
+<div class="neumorph_container" style="width: {{width}}; height: {{height}}; border-radius: {{border}};">
+    <div class="neumorph_innercontainer neumorph_checkbox" style="border-radius: {{border}};">
+        <div class="checkbox" onclick="toggleShow" >
+            <div if="{{color}}" class="tick" show="{{visible}}" style="border: 5px solid {{color}}; border-top:0px ; border-left:0px;"></div>
+            <div class="tick" show="{{visible}}" style="border: 5px solid black; border-top:0px ; border-left:0px;" else></div>
+        </div>
+    </div>
+</div>

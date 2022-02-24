@@ -1,0 +1,13 @@
+<div class="neumorph_container" style="width: {{width}}; height: {{height}}; border-radius: {{border}};">
+    <div class="neumorph_innercontainer neumorph_navbar" style="border-radius: {{border}};">
+        <div class="slot" onclick="clickLeft">
+            <slot name="first"></slot>
+        </div>
+        <div class="slot" onclick="clickMiddle">
+            <slot name="second"></slot>
+        </div>
+        <div class="slot" onclick="clickRight">
+            <slot name="third"></slot>
+        </div>
+    </div>
+</div>

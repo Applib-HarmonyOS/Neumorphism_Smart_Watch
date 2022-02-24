@@ -1,0 +1,7 @@
+<div class="neumorph_container" onclick="handleClick" style="width: {{width}}; height: {{height}}; border-radius: {{border}};">
+    <div class="neumorph_innercontainer neumorph_button" style="border-radius: {{border}};">
+        <image if="{{icon}}" class="icon" src="{{icon}}"></image>
+        <div if="{{icon}}" style="margin: 0 40px" class="slot"><slot></slot></div>
+        <div class="slot" else><slot></slot></div>
+    </div>
+</div>

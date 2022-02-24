@@ -1,0 +1,9 @@
+<div class="neumorph_container" style="width: {{width}}; height: {{height}}; border-radius: {{border}};">
+    <div class="neumorph_innercontainer neumorph_frame" style="border-radius: {{border}};">
+        <div class="neumorph_avatar fill" style="border-radius: {{border}};">
+            <div class="avatar_image">
+                <image if="{{icon}}" class="icon" src="{{icon}}" ></image>
+            </div>
+        </div>
+    </div>
+</div>

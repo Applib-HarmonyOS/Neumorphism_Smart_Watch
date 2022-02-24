@@ -1,0 +1,195 @@
+@font-face {
+    font-family: poppins-semibold;
+    src: url('/common/poppins/Poppins-SemiBold.otf');
+}
+
+@font-face {
+    font-family: poppins-regular;
+    src: url('/common/poppins/Poppins-Regular.otf');
+}
+
+@font-face {
+    font-family: centurygothic-bold;
+    src: url('/common/poppins/CenturyGothic-Bold.ttf');
+}
+
+.semi_bold{
+    font-family: poppins-semibold;
+}
+
+.regular{
+    font-family: poppins-regular;
+}
+
+.bold{
+    font-family: centurygothic-bold;
+}
+
+.theme_text{
+    color: #FF006E;
+}
+
+.dark_text{
+    color:#666666;
+}
+
+.body{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 320px;
+    height: 340px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header image{
+    width: 50px;
+    height: 50px;
+}
+
+.step_counter, .notifications{
+    padding: 10px;
+    width: 60px;
+    height: 75px;
+    border-radius: 50px;
+}
+
+.weather, .temperature{
+    height: 75px;
+    width: 60px;
+}
+
+.weather image{
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    bottom: 5px;
+    right: 8px;
+}
+
+.temperature text{
+    font-size: 15px;
+    position: absolute;
+    bottom: 0px;
+}
+
+.clock{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hour{
+    margin-right: 20px;
+}
+
+.hour image{
+    height: 90px;
+    width: 50px;
+}
+
+.other{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 15px;
+}
+
+.other image{
+    height: 40px;
+    width: 25px;
+    margin-bottom: 10px;
+}
+
+.footer{
+    width: 80%;
+    height: 110px;
+    border-radius: 10px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer_icon{
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    border-radius: 50px;
+    padding: 5px;
+}
+
+.footer_info{
+    margin-left: 20px;
+    scrollbar-width: 0px;
+    overflow: scroll;
+    width: 140px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 10px;
+}
+
+.footer_title{
+    font-size: 12px;
+}
+
+.footer_subject{
+    margin: 5px 0;
+}
+
+.activity{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+}
+
+.activity image{
+    width: 60px;
+    height: 60px;
+}
+
+.activity_btn{
+    padding: 10px;
+    margin: 10px 15px;
+    width: 60px;
+    border-radius: 50px;
+}
+
+.arrow{
+    margin:10px;
+    padding: 5px 15px;
+    width: 60px;
+    height: 40px;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (device-type: wearable){
+    .header{
+        display: none;
+    }
+    .footer{
+        display: none;
+    }
+}

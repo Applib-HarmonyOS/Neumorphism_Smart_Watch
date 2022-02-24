@@ -1,0 +1,7 @@
+<div class="neumorph_container" style="width: {{width}}; height: {{height}}; border-radius: {{border}};">
+    <div class="neumorph_innercontainer neumorph_form" style="border-radius: {{border}};">
+        <form onsubmit='handleSubmit' onreset='handleReset'>
+        <slot></slot>
+        </form>
+    </div>
+</div>
