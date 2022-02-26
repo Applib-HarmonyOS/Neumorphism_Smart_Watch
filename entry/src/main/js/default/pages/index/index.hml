@@ -1,19 +1,19 @@
-<element name='neutheme' src='../node_modules/hmos-neumorphism/theme/theme.hml'></element>
-<element name='neualert' src='../node_modules/hmos-neumorphism/alert/alert.hml'></element>
-<element name='neuavatar' src='../node_modules/hmos-neumorphism/avatar/avatar.hml'></element>
-<element name='neubutton' src='../node_modules/hmos-neumorphism/button/button.hml'></element>
-<element name='neubuttons' src='../node_modules/hmos-neumorphism/buttons/buttons.hml'></element>
-<element name='neucard' src='../node_modules/hmos-neumorphism/card/card.hml'></element>
-<element name='neucheckbox' src='../node_modules/hmos-neumorphism/checkbox/checkbox.hml'></element>
-<element name='neudropdown' src='../node_modules/hmos-neumorphism/dropdown/dropdown.hml'></element>
-<element name='neuform' src='../node_modules/hmos-neumorphism/form/form.hml'></element>
-<element name='neuinput' src='../node_modules/hmos-neumorphism/input/input.hml'></element>
-<element name='neulabel' src='../node_modules/hmos-neumorphism/label/label.hml'></element>
-<element name='neunavbar' src='../node_modules/hmos-neumorphism/navbar/navbar.hml'></element>
-<element name='neupagination' src='../node_modules/hmos-neumorphism/pagination/pagination.hml'></element>
-<element name='neuprogress' src='../node_modules/hmos-neumorphism/progress/progress.hml'></element>
-<element name='neuradio' src='../node_modules/hmos-neumorphism/radio/radio.hml'></element>
-<element name='neuswitcher' src='../node_modules/hmos-neumorphism/switcher/switcher.hml'></element>
+<element name='neutheme' src='../../../../../../node_modules/hmos-neumorphism/theme/theme.hml'></element>
+<element name='neualert' src='../../../../../../node_modules/hmos-neumorphism/alert/alert.hml'></element>
+<element name='neuavatar' src='../../../../../../node_modules/hmos-neumorphism/avatar/avatar.hml'></element>
+<element name='neubutton' src='../../../../../../node_modules/hmos-neumorphism/button/button.hml'></element>
+<element name='neubuttons' src='../../../../../../node_modules/hmos-neumorphism/buttons/buttons.hml'></element>
+<element name='neucard' src='../../../../../../node_modules/hmos-neumorphism/card/card.hml'></element>
+<element name='neucheckbox' src='../../../../../../node_modules/hmos-neumorphism/checkbox/checkbox.hml'></element>
+<element name='neudropdown' src='../../../../../../node_modules/hmos-neumorphism/dropdown/dropdown.hml'></element>
+<element name='neuform' src='../../../../../../node_modules/hmos-neumorphism/form/form.hml'></element>
+<element name='neuinput' src='../../../../../../node_modules/hmos-neumorphism/input/input.hml'></element>
+<element name='neulabel' src='../../../../../../node_modules/hmos-neumorphism/label/label.hml'></element>
+<element name='neunavbar' src='../../../../../../node_modules/hmos-neumorphism/navbar/navbar.hml'></element>
+<element name='neupagination' src='../../../../../../node_modules/hmos-neumorphism/pagination/pagination.hml'></element>
+<element name='neuprogress' src='../../../../../../node_modules/hmos-neumorphism/progress/progress.hml'></element>
+<element name='neuradio' src='../../../../../../node_modules/hmos-neumorphism/radio/radio.hml'></element>
+<element name='neuswitcher' src='../../../../../../node_modules/hmos-neumorphism/switcher/switcher.hml'></element>
 
 <div class="body">
     <neutheme theme="light_mode" class="container">

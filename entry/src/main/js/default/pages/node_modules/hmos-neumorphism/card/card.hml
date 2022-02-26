@@ -1,7 +1,0 @@
-<div class="neumorph_container" style="width: {{width}}; height: {{height}}; border-radius: {{border}};">
-    <div class="neumorph_innercontainer neumorph_card" style="border-radius: {{border}};">
-        <div class="slot">
-        <slot></slot>
-        </div>
-    </div>
-</div>
