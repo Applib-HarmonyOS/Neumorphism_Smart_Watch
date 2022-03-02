@@ -39,47 +39,30 @@ export default {
         console.log("Notifications toggled !");
     },
     fetchDateAndTime : function(){
-        let data;
-        fetch.fetch({
-            url:'https://www.timeapi.io/api/Time/current/zone?timeZone=asia/kolkata',
-            responseType:"json",
-            method: 'GET',
-            success:function(resp)
-            {
-                data = JSON.parse(resp.data);
-            },
-            fail:(data,code) => {
-                console.log("fail data:"+ JSON.stringify(data));
-                console.log("fail code:"+ code)
-            },
-            complete: ()=>{
-                this.date_d=data.day;
-                this.date_m=data.month;
-                this.time_h=data.hour;
-                this.time_m=data.minute;
-                this.date_w=data.dayOfWeek.substring(0,3);
-                if (this.time_h.toString().length == 1)
-                {
-                    this.time_h_0 = "0";
-                    this.time_h_1 = this.time_h.toString().substring(0,1);
-                }
-                else
-                {
-                    this.time_h_0 = this.time_h.toString().substring(0, 1);
-                    this.time_h_1 = this.time_h.toString().substring(1, 2);
-                }
-                if (this.time_m.toString().length == 1)
-                {
-                    this.time_m_0 = "0";
-                    this.time_m_1 = this.time_m.toString().substring(0, 1);
-                }
-                else
-                {
-                    this.time_m_0 = this.time_m.toString().substring(0, 1);
-                    this.time_m_1 = this.time_m.toString().substring(1, 2);
-                }
-            }
-        })
+        const date = new Date();
+        this.date_d=(String(date.getDate()).padStart(2, '0'))
+        this.date_m=(String(date.getMonth()+1).padStart(2, '0'))
+        this.time_h=(String(date.getHours()).padStart(2, '0'))
+        this.time_m=(String(date.getMinutes()).padStart(2, '0'))
+        this.time_h_0 = this.time_h.toString().substring(0, 1);
+        this.time_h_1 = this.time_h.toString().substring(1, 2);
+        this.time_m_0 = this.time_m.toString().substring(0, 1);
+        this.time_m_1 = this.time_m.toString().substring(1, 2);
+        const dayOfWeek = (date.getDay())
+        if (dayOfWeek==1)
+        this.date_w="Mon"
+        else if (dayOfWeek==2)
+        this.date_w="Tue"
+        else if (dayOfWeek==3)
+        this.date_w="Wed"
+        else if (dayOfWeek==4)
+        this.date_w="Thu"
+        else if (dayOfWeek==5)
+        this.date_w="Fri"
+        else if (dayOfWeek==6)
+        this.date_w="Sat"
+        else
+        this.date_w="Sun"
     },
     fetchData : function(){
         let data;
