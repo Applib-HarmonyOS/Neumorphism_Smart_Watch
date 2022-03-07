@@ -34,7 +34,7 @@ allprojects {
 }
 sonarqube {
     properties {
-        property "sonar.projectKey", "applibgroup_Neumorphism"
+        property "sonar.projectKey", "applibgroup_Neumorphism_Smart_Watch"
         property "sonar.organization", "applibgroup"
         property "sonar.host.url", "https://sonarcloud.io/"
         property "sonar.sources", "entry/src"
