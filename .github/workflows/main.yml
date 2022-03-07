@@ -4,7 +4,6 @@ on:
   pull_request:
     branches: [ main ]
 
-
 jobs:
   hello_world_job:
     runs-on: windows-latest
@@ -22,17 +21,12 @@ jobs:
         with:
           node-version: '14'
       - run: npm install
-      - name: install ESLint
-        run: npm install eslint babel-eslint --save-dev
       - id: main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           LANG: JS
-        uses: applibgroup/HarmonyOs-build@v2.995
-      - name: Run ESLint
-        run: .\node_modules\.bin\eslint -c ${{ github.workspace }}\SDK\config\.eslintrc.js entry
-        continue-on-error: true
+        uses: applibgroup/HarmonyOs-build@v2.8
       - name: Upload Artifact
         uses: actions/upload-artifact@v2
         with: 
