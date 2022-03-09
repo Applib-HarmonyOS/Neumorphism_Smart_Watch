@@ -14,15 +14,15 @@
 }
 
 .semi_bold{
-    font-family: poppins-semibold;
+    font-family: poppins-semibold, sans-serif;
 }
 
 .regular{
-    font-family: poppins-regular;
+    font-family: poppins-regular, sans-serif;
 }
 
 .bold{
-    font-family: centurygothic-bold;
+    font-family: centurygothic-bold, sans-serif;
 }
 
 .theme_text{
@@ -185,7 +185,7 @@
     align-items: center;
 }
 
-@media (device-type: wearable){
+@media only screen and (max-width: 768px){
     .header{
         display: none;
     }
