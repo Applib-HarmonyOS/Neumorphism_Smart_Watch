@@ -5,7 +5,7 @@ apply plugin: "org.sonarqube"
 ohos {
     compileSdkVersion 6
 }
-    
+	
 buildscript {
     repositories {
         maven {
@@ -18,7 +18,7 @@ buildscript {
     dependencies {
         classpath 'com.huawei.ohos:hap:3.0.3.4'
         classpath 'com.huawei.ohos:decctest:1.2.6.0'
-    classpath "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:3.3"
+	classpath "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:3.3"
     }
 }
 
