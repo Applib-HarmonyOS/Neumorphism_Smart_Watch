@@ -50,19 +50,19 @@ export default {
         this.time_m_1 = this.time_m.toString().substring(1, 2);
         const dayOfWeek = (date.getDay())
         if (dayOfWeek==1)
-        this.date_w=this.$t('strings.Mon');
+        this.date_w="Mon"
         else if (dayOfWeek==2)
-        this.date_w=this.$t('strings.Tue');
+        this.date_w="Tue"
         else if (dayOfWeek==3)
-        this.date_w=this.$t('strings.Wed');
+        this.date_w="Wed"
         else if (dayOfWeek==4)
-        this.date_w=this.$t('strings.Thu');
+        this.date_w="Thu"
         else if (dayOfWeek==5)
-        this.date_w=this.$t('strings.Fri');
+        this.date_w="Fri"
         else if (dayOfWeek==6)
-        this.date_w=this.$t('strings.Sat');
+        this.date_w="Sat"
         else
-        this.date_w=this.$t('strings.Sun');
+        this.date_w="Sun"
     },
     fetchData : function(){
         let data;
@@ -83,22 +83,6 @@ export default {
                 this.notification_title =  data.notification_title;
                 this.notification_subject =  data.notification_subject;
                 this.notification_message =  data.notification_message;
-            }
-        })
-        fetch.fetch({
-            url:'https://weatherdbi.herokuapp.com/data/weather/chennai',
-            responseType:"json",
-            method: 'GET',
-            success:function(resp)
-            {
-                data = JSON.parse(resp.data);
-            },
-            fail:(data,code) => {
-                console.log("fail data:"+ JSON.stringify(data));
-                console.log("fail code:"+ code)
-            },
-            complete: ()=>{
-                this.temperature = data.currentConditions.temp.c;
             }
         })
     },
