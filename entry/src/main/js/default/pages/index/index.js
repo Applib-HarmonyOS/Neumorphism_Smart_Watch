@@ -49,20 +49,27 @@ export default {
         this.time_m_0 = this.time_m.toString().substring(0, 1);
         this.time_m_1 = this.time_m.toString().substring(1, 2);
         const dayOfWeek = (date.getDay())
-        if (dayOfWeek==1)
-        this.date_w=this.$t('strings.Mon');
-        else if (dayOfWeek==2)
-        this.date_w=this.$t('strings.Tue');
-        else if (dayOfWeek==3)
-        this.date_w=this.$t('strings.Wed');
-        else if (dayOfWeek==4)
-        this.date_w=this.$t('strings.Thu');
-        else if (dayOfWeek==5)
-        this.date_w=this.$t('strings.Fri');
-        else if (dayOfWeek==6)
-        this.date_w=this.$t('strings.Sat');
-        else
-        this.date_w=this.$t('strings.Sun');
+        if (dayOfWeek==1) {
+            this.date_w = this.$t('strings.Mon');
+        }
+        else if (dayOfWeek==2) {
+            this.date_w = this.$t('strings.Tue');
+        }
+        else if (dayOfWeek==3) {
+            this.date_w = this.$t('strings.Wed');
+        }
+        else if (dayOfWeek==4) {
+            this.date_w = this.$t('strings.Thu');
+        }
+        else if (dayOfWeek==5) {
+            this.date_w = this.$t('strings.Fri');
+        }
+        else if (dayOfWeek==6) {
+            this.date_w = this.$t('strings.Sat');
+        }
+        else {
+            this.date_w = this.$t('strings.Sun');
+        }
     },
     fetchData : function(){
         let data;
@@ -74,8 +81,8 @@ export default {
             {
             data = JSON.parse(resp.data);
             },
-            fail:(data,code) => {
-            console.log("fail data:"+ JSON.stringify(data));
+            fail:(err,code) => {
+            console.log("fail data:"+ JSON.stringify(err));
             console.log("fail code:"+ code)
             },
             complete: ()=>{
@@ -93,8 +100,8 @@ export default {
             {
                 data = JSON.parse(resp.data);
             },
-            fail:(data,code) => {
-                console.log("fail data:"+ JSON.stringify(data));
+            fail:(err,code) => {
+                console.log("fail data:"+ JSON.stringify(err));
                 console.log("fail code:"+ code)
             },
             complete: ()=>{
