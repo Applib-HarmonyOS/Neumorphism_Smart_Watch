@@ -36,6 +36,4 @@ export default {
         require('../../../test/List.test')
         core.execute()
     },
-    onReady() {
-    },
 }
