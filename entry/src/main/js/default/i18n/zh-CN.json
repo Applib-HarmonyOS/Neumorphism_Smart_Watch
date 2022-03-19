@@ -6,6 +6,9 @@
     "Thu": "周四",
     "Fri": "周五",
     "Sat": "周六",
-    "Sun": "周日"
+    "Sun": "周日",
+    "Calories_Burning": "卡路里燃烧",
+    "Heart_Rate": "心率",
+    "Sleep_Track": "睡眠轨道"
   }
 }

@@ -77,19 +77,19 @@
                 <neubutton class="activity_btn" @button-event="onClickCalories">
                     <image src="common/images/calories.png"></image>
                 </neubutton>
-                <text>Calories Burning</text>
+                <text>{{$t('strings.Calories_Burning')}}</text>
             </div>
             <div class="activity">
                 <neubutton class="activity_btn" @button-event="onClickHeartRate">
                     <image src="common/images/heart_rate.png"></image>
                 </neubutton>
-                <text>Heart Rate</text>
+                <text>{{$t('strings.Heart_Rate')}}</text>
             </div>
             <div class="activity">
                 <neubutton class="activity_btn" @button-event="onClickSleepTrack">
                     <image src="common/images/sleep_track.png"></image>
                 </neubutton>
-                <text>Sleep Track</text>
+                <text>{{$t('strings.Sleep_Track')}}</text>
             </div>
         </div>
         <neubutton class="arrow" @button-event="toggleNotifications">
