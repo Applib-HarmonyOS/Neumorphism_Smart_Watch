@@ -9,6 +9,9 @@
     "Sun": "周日",
     "Calories_Burning": "卡路里燃烧",
     "Heart_Rate": "心率",
-    "Sleep_Track": "睡眠轨道"
+    "Sleep_Track": "睡眠轨道",
+    "notification_title": "标题",
+    "notification_subject": "主题",
+    "notification_message": "信息"
   }
 }

@@ -9,6 +9,9 @@
     "Sun": "Sun",
     "Calories_Burning": "Calories Burning",
     "Heart_Rate": "Heart Rate",
-    "Sleep_Track": "Sleep Track"
+    "Sleep_Track": "Sleep Track",
+    "notification_title": "Title",
+    "notification_subject": "Subject",
+    "notification_message": "Message"
   }
 }

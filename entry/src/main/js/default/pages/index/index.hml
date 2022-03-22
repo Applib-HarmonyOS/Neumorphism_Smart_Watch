@@ -22,17 +22,7 @@
                 <image src="common/images/step_counter.png"></image>
             </neubutton>
             <div class="weather">
-                <image if="{{weather =='partly_sunny' }}" src="common/images/partly_sunny.png"></image>
-                <image elif="{{weather =='cloudy' }}" src="common/images/cloudy.png"></image>
-                <image elif="{{weather =='windy' }}" src="common/images/windy.png"></image>
-                <image elif="{{weather =='rainy' }}" src="common/images/rainy.png"></image>
-                <image elif="{{weather =='sleeting' }}" src="common/images/sleeting.png"></image>
-                <image elif="{{weather =='sun_n_rain' }}" src="common/images/sun_n_rain.png"></image>
-                <image elif="{{weather =='sun_n_windy' }}" src="common/images/sun_n_windy.png"></image>
-                <image elif="{{weather =='sunny' }}" src="common/images/sunny.png"></image>
-                <image elif="{{weather =='thunderstorm' }}" src="common/images/thunderstorm.png"></image>
-                <image elif="{{weather =='thunderstorm_n_rain' }}" src="common/images/thunderstorm_n_rain.png"></image>
-                <image else src="common/images/sunny.png"></image>
+                <image src="{{ weather_icon }}"></image>
             </div>
             <div class="temperature regular theme_text">
                 <text>{{temperature}}&deg;</text>

@@ -3,12 +3,11 @@ import fetch from '@system.fetch';
 export default {
     data: {
         notifications: false,
-        // cloudy, windy, partly_sunny, rainy, sleeting, sun_n_rain, sun_n_windy, sunny, thunderstorm_n_rain, thunderstorm
-        weather: "partly_sunny",
+        weather_icon: "https://ssl.gstatic.com/onebox/weather/64/sunny.png",
         temperature: "30",
-        notification_title: "Title",
-        notification_subject: "Subject",
-        notification_message: "Message",
+        notification_title: this.$t('strings.notification_title'),
+        notification_subject: this.$t('strings.notification_subject'),
+        notification_message: this.$t('strings.notification_message'),
         time_h: "00",
         time_m: "00",
         date_w: "Mon",
@@ -66,7 +65,6 @@ export default {
             console.log("fail code:"+ code)
             },
             complete: ()=>{
-                this.weather = data.weather;
                 this.notification_title =  data.notification_title;
                 this.notification_subject =  data.notification_subject;
                 this.notification_message =  data.notification_message;
@@ -86,6 +84,7 @@ export default {
             },
             complete: ()=>{
                 this.temperature = data.currentConditions.temp.c;
+                this.weather_icon = data.currentConditions.iconURL;
             }
         })
     },
