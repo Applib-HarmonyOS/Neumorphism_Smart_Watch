@@ -5,9 +5,6 @@ export default {
         notifications: false,
         weather_icon: "https://ssl.gstatic.com/onebox/weather/64/sunny.png",
         temperature: "30",
-        notification_title: this.$t('strings.notification_title'),
-        notification_subject: this.$t('strings.notification_subject'),
-        notification_message: this.$t('strings.notification_message'),
         time_h: "00",
         time_m: "00",
         date_w: "Mon",
@@ -89,6 +86,9 @@ export default {
         })
     },
     onInit(){
+        this.notification_title= this.$t('strings.notification_title'),
+        this.notification_subject= this.$t('strings.notification_subject'),
+        this.notification_message= this.$t('strings.notification_message'),
         this.fetchDateAndTime();
         this.fetchData();
         setInterval(this.fetchDateAndTime, 1000);
