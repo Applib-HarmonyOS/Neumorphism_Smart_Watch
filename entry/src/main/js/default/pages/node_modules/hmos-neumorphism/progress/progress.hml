@@ -1,6 +1,0 @@
-<div class="neumorph_container" style="width: {{width}}; height: {{height}}; border-radius: {{border}}; " >
-    <div class="neumorph_innercontainer neumorph_progress" style="border-radius: {{border}}; ">
-        <div if="{{color}}" class="fill" style="width: {{progress}}; border-radius: {{border}}; background-color: {{color}};"></div>
-        <div class="fill" style="width: {{progress}}; border-radius: {{border}};" else></div>
-    </div>
-</div>

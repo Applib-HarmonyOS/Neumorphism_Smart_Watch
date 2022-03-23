@@ -1,19 +1,19 @@
-<element name='neutheme' src='../node_modules/hmos-neumorphism/theme/theme.hml'></element>
-<element name='neualert' src='../node_modules/hmos-neumorphism/alert/alert.hml'></element>
-<element name='neuavatar' src='../node_modules/hmos-neumorphism/avatar/avatar.hml'></element>
-<element name='neubutton' src='../node_modules/hmos-neumorphism/button/button.hml'></element>
-<element name='neubuttons' src='../node_modules/hmos-neumorphism/buttons/buttons.hml'></element>
-<element name='neucard' src='../node_modules/hmos-neumorphism/card/card.hml'></element>
-<element name='neucheckbox' src='../node_modules/hmos-neumorphism/checkbox/checkbox.hml'></element>
-<element name='neudropdown' src='../node_modules/hmos-neumorphism/dropdown/dropdown.hml'></element>
-<element name='neuform' src='../node_modules/hmos-neumorphism/form/form.hml'></element>
-<element name='neuinput' src='../node_modules/hmos-neumorphism/input/input.hml'></element>
-<element name='neulabel' src='../node_modules/hmos-neumorphism/label/label.hml'></element>
-<element name='neunavbar' src='../node_modules/hmos-neumorphism/navbar/navbar.hml'></element>
-<element name='neupagination' src='../node_modules/hmos-neumorphism/pagination/pagination.hml'></element>
-<element name='neuprogress' src='../node_modules/hmos-neumorphism/progress/progress.hml'></element>
-<element name='neuradio' src='../node_modules/hmos-neumorphism/radio/radio.hml'></element>
-<element name='neuswitcher' src='../node_modules/hmos-neumorphism/switcher/switcher.hml'></element>
+<element name='neutheme' src='../../../../../../node_modules/hmos-neumorphism/theme/theme.hml'></element>
+<element name='neualert' src='../../../../../../node_modules/hmos-neumorphism/alert/alert.hml'></element>
+<element name='neuavatar' src='../../../../../../node_modules/hmos-neumorphism/avatar/avatar.hml'></element>
+<element name='neubutton' src='../../../../../../node_modules/hmos-neumorphism/button/button.hml'></element>
+<element name='neubuttons' src='../../../../../../node_modules/hmos-neumorphism/buttons/buttons.hml'></element>
+<element name='neucard' src='../../../../../../node_modules/hmos-neumorphism/card/card.hml'></element>
+<element name='neucheckbox' src='../../../../../../node_modules/hmos-neumorphism/checkbox/checkbox.hml'></element>
+<element name='neudropdown' src='../../../../../../node_modules/hmos-neumorphism/dropdown/dropdown.hml'></element>
+<element name='neuform' src='../../../../../../node_modules/hmos-neumorphism/form/form.hml'></element>
+<element name='neuinput' src='../../../../../../node_modules/hmos-neumorphism/input/input.hml'></element>
+<element name='neulabel' src='../../../../../../node_modules/hmos-neumorphism/label/label.hml'></element>
+<element name='neunavbar' src='../../../../../../node_modules/hmos-neumorphism/navbar/navbar.hml'></element>
+<element name='neupagination' src='../../../../../../node_modules/hmos-neumorphism/pagination/pagination.hml'></element>
+<element name='neuprogress' src='../../../../../../node_modules/hmos-neumorphism/progress/progress.hml'></element>
+<element name='neuradio' src='../../../../../../node_modules/hmos-neumorphism/radio/radio.hml'></element>
+<element name='neuswitcher' src='../../../../../../node_modules/hmos-neumorphism/switcher/switcher.hml'></element>
 
 <div class="body">
     <neutheme theme="light_mode" class="container">
@@ -22,17 +22,7 @@
                 <image src="common/images/step_counter.png"></image>
             </neubutton>
             <div class="weather">
-                <image if="{{weather =='partly_sunny' }}" src="common/images/partly_sunny.png"></image>
-                <image elif="{{weather =='cloudy' }}" src="common/images/cloudy.png"></image>
-                <image elif="{{weather =='windy' }}" src="common/images/windy.png"></image>
-                <image elif="{{weather =='rainy' }}" src="common/images/rainy.png"></image>
-                <image elif="{{weather =='sleeting' }}" src="common/images/sleeting.png"></image>
-                <image elif="{{weather =='sun_n_rain' }}" src="common/images/sun_n_rain.png"></image>
-                <image elif="{{weather =='sun_n_windy' }}" src="common/images/sun_n_windy.png"></image>
-                <image elif="{{weather =='sunny' }}" src="common/images/sunny.png"></image>
-                <image elif="{{weather =='thunderstorm' }}" src="common/images/thunderstorm.png"></image>
-                <image elif="{{weather =='thunderstorm_n_rain' }}" src="common/images/thunderstorm_n_rain.png"></image>
-                <image else src="common/images/sunny.png"></image>
+                <image src="{{ weather_icon }}"></image>
             </div>
             <div class="temperature regular theme_text">
                 <text>{{temperature}}&deg;</text>
@@ -77,19 +67,19 @@
                 <neubutton class="activity_btn" @button-event="onClickCalories">
                     <image src="common/images/calories.png"></image>
                 </neubutton>
-                <text>Calories Burning</text>
+                <text>{{$t('strings.Calories_Burning')}}</text>
             </div>
             <div class="activity">
                 <neubutton class="activity_btn" @button-event="onClickHeartRate">
                     <image src="common/images/heart_rate.png"></image>
                 </neubutton>
-                <text>Heart Rate</text>
+                <text>{{$t('strings.Heart_Rate')}}</text>
             </div>
             <div class="activity">
                 <neubutton class="activity_btn" @button-event="onClickSleepTrack">
                     <image src="common/images/sleep_track.png"></image>
                 </neubutton>
-                <text>Sleep Track</text>
+                <text>{{$t('strings.Sleep_Track')}}</text>
             </div>
         </div>
         <neubutton class="arrow" @button-event="toggleNotifications">

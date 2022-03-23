@@ -1,17 +1,19 @@
+import fetch from '@system.fetch';
+
 export default {
     data: {
         notifications: false,
-        weather: "partly_sunny",
-        // cloudy, windy, partly_sunny, rainy, sleeting, sun_n_rain, sun_n_windy, sunny, thunderstorm_n_rain, thunderstorm
-        temperature: 30,
-        time_h: 12,
-        time_m: 38,
+        weather_icon: "https://ssl.gstatic.com/onebox/weather/64/sunny.png",
+        temperature: "30",
+        time_h: "00",
+        time_m: "00",
         date_w: "Mon",
-        date_d: 14,
-        date_m: 12,
-        notification_title: "11:15 AM - 12:30 PM",
-        notification_subject: "UI Design Review",
-        notification_message: "Meeting Room 5, FLoor 3, HTIPL.",
+        date_d: "01",
+        date_m: "01",
+        time_h_0: "0",
+        time_h_1: "0",
+        time_m_0: "0",
+        time_m_1: "0",
     },
     onClickStepCounter: function() {
         console.log("Step Counter Button Clicked !");
@@ -32,10 +34,63 @@ export default {
         this.notifications = !this.notifications;
         console.log("Notifications toggled !");
     },
+    fetchDateAndTime : function(){
+        const date = new Date();
+        this.date_d=(String(date.getDate()).padStart(2, '0'))
+        this.date_m=(String(date.getMonth()+1).padStart(2, '0'))
+        this.time_h=(String(date.getHours()).padStart(2, '0'))
+        this.time_m=(String(date.getMinutes()).padStart(2, '0'))
+        this.time_h_0 = this.time_h.toString().substring(0, 1);
+        this.time_h_1 = this.time_h.toString().substring(1, 2);
+        this.time_m_0 = this.time_m.toString().substring(0, 1);
+        this.time_m_1 = this.time_m.toString().substring(1, 2);
+        const weekDays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+        this.date_w = this.$t('strings.'+weekDays[date.getDay()]);
+    },
+    fetchData : function(){
+        let data;
+        fetch.fetch({
+            url:'https://neumorphism-api.herokuapp.com/neumorphism/smart_watch',
+            responseType:"json",
+            method: 'GET',
+            success:function(resp)
+            {
+            data = JSON.parse(resp.data);
+            },
+            fail:(err,code) => {
+            console.log("fail data:"+ JSON.stringify(err));
+            console.log("fail code:"+ code)
+            },
+            complete: ()=>{
+                this.notification_title =  data.notification_title;
+                this.notification_subject =  data.notification_subject;
+                this.notification_message =  data.notification_message;
+            }
+        })
+        fetch.fetch({
+            url:'https://weatherdbi.herokuapp.com/data/weather/chennai',
+            responseType:"json",
+            method: 'GET',
+            success:function(resp)
+            {
+                data = JSON.parse(resp.data);
+            },
+            fail:(err,code) => {
+                console.log("fail data:"+ JSON.stringify(err));
+                console.log("fail code:"+ code)
+            },
+            complete: ()=>{
+                this.temperature = data.currentConditions.temp.c;
+                this.weather_icon = data.currentConditions.iconURL;
+            }
+        })
+    },
     onInit(){
-        this.time_h_0=this.time_h.toString()[0];
-        this.time_h_1=this.time_h.toString()[1];
-        this.time_m_0=this.time_m.toString()[0];
-        this.time_m_1=this.time_m.toString()[1];
+        this.notification_title= this.$t('strings.notification_title'),
+        this.notification_subject= this.$t('strings.notification_subject'),
+        this.notification_message= this.$t('strings.notification_message'),
+        this.fetchDateAndTime();
+        this.fetchData();
+        setInterval(this.fetchDateAndTime, 1000);
     }
 }
