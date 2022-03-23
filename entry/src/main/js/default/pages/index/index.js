@@ -86,9 +86,9 @@ export default {
         })
     },
     onInit(){
-        this.notification_title= this.$t('strings.notification_title'),
-        this.notification_subject= this.$t('strings.notification_subject'),
-        this.notification_message= this.$t('strings.notification_message'),
+        this.notification_title= this.$t('strings.notification_title');
+        this.notification_subject= this.$t('strings.notification_subject');
+        this.notification_message= this.$t('strings.notification_message');
         this.fetchDateAndTime();
         this.fetchData();
         setInterval(this.fetchDateAndTime, 1000);
