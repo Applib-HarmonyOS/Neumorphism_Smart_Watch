@@ -7,7 +7,13 @@
       "name": "1.0.0"
     }
   },
-  "deviceConfig": {},
+  "deviceConfig": {
+    "default": {
+      "network": {
+        "cleartextTraffic": true
+      }
+    }
+  },
   "module": {
     "package": "com.cyb0rg.neumorphism_smart_watch",
     "name": ".MyApplication",
@@ -55,6 +61,11 @@
           "designWidth": 720,
           "autoDesignWidth": true
         }
+      }
+    ],
+    "reqPermissions": [
+      {
+        "name": "ohos.permission.INTERNET"
       }
     ]
   }

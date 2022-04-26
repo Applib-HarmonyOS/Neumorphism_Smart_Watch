@@ -30,80 +30,78 @@ export default {
         time_m_0: "0",
         time_m_1: "0",
     },
-    onClickStepCounter: function() {
+    onClickStepCounter: function () {
         console.log("Step Counter Button Clicked !");
     },
-    onClickNotifications: function() {
+    onClickNotifications: function () {
         console.log("Notifications Button Clicked !");
     },
-    onClickCalories: function() {
+    onClickCalories: function () {
         console.log("Calories Button Clicked !");
     },
-    onClickHeartRate: function() {
+    onClickHeartRate: function () {
         console.log("Heart Rate Button Clicked !");
     },
-    onClickSleepTrack: function() {
+    onClickSleepTrack: function () {
         console.log("Sleep Track Button Clicked !");
     },
-    toggleNotifications: function() {
+    toggleNotifications: function () {
         this.notifications = !this.notifications;
         console.log("Notifications toggled !");
     },
-    fetchDateAndTime : function(){
+    fetchDateAndTime: function () {
         const date = new Date();
-        this.date_d=(String(date.getDate()).padStart(2, '0'))
-        this.date_m=(String(date.getMonth()+1).padStart(2, '0'))
-        this.time_h=(String(date.getHours()).padStart(2, '0'))
-        this.time_m=(String(date.getMinutes()).padStart(2, '0'))
+        this.date_d = (String(date.getDate()).padStart(2, '0'))
+        this.date_m = (String(date.getMonth() + 1).padStart(2, '0'))
+        this.time_h = (String(date.getHours()).padStart(2, '0'))
+        this.time_m = (String(date.getMinutes()).padStart(2, '0'))
         this.time_h_0 = this.time_h.toString().substring(0, 1);
         this.time_h_1 = this.time_h.toString().substring(1, 2);
         this.time_m_0 = this.time_m.toString().substring(0, 1);
         this.time_m_1 = this.time_m.toString().substring(1, 2);
         const weekDays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
-        this.date_w = this.$t('strings.'+weekDays[date.getDay()]);
+        this.date_w = this.$t('strings.' + weekDays[date.getDay()]);
     },
-    fetchData : function(){
+    fetchData: function () {
         let data;
         fetch.fetch({
-            url:'https://neumorphism-api.herokuapp.com/neumorphism/smart_watch',
-            responseType:"json",
+            url: 'https://neumorphism-api.herokuapp.com/neumorphism/smart_watch',
+            responseType: "json",
             method: 'GET',
-            success:function(resp)
-            {
-            data = JSON.parse(resp.data);
+            success: function (resp) {
+                data = JSON.parse(resp.data);
             },
-            fail:(err,code) => {
-            console.log("fail data:"+ JSON.stringify(err));
-            console.log("fail code:"+ code)
+            fail: (err, code) => {
+                console.log("fail data:" + JSON.stringify(err));
+                console.log("fail code:" + code)
             },
-            complete: ()=>{
-                this.notification_title =  data.notification_title;
-                this.notification_subject =  data.notification_subject;
-                this.notification_message =  data.notification_message;
+            complete: () => {
+                this.notification_title = data.notification_title;
+                this.notification_subject = data.notification_subject;
+                this.notification_message = data.notification_message;
             }
         })
         fetch.fetch({
-            url:'https://weatherdbi.herokuapp.com/data/weather/chennai',
-            responseType:"json",
+            url: 'https://weatherdbi.herokuapp.com/data/weather/chennai',
+            responseType: "json",
             method: 'GET',
-            success:function(resp)
-            {
+            success: function (resp) {
                 data = JSON.parse(resp.data);
             },
-            fail:(err,code) => {
-                console.log("fail data:"+ JSON.stringify(err));
-                console.log("fail code:"+ code)
+            fail: (err, code) => {
+                console.log("fail data:" + JSON.stringify(err));
+                console.log("fail code:" + code)
             },
-            complete: ()=>{
+            complete: () => {
                 this.temperature = data.currentConditions.temp.c;
                 this.weather_icon = data.currentConditions.iconURL;
             }
         })
     },
-    onInit(){
-        this.notification_title= this.$t('strings.notification_title');
-        this.notification_subject= this.$t('strings.notification_subject');
-        this.notification_message= this.$t('strings.notification_message');
+    onInit() {
+        this.notification_title = this.$t('strings.notification_title');
+        this.notification_subject = this.$t('strings.notification_subject');
+        this.notification_message = this.$t('strings.notification_message');
         this.fetchDateAndTime();
         this.fetchData();
         setInterval(this.fetchDateAndTime, 1000);
