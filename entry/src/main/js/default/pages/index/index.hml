@@ -18,14 +18,14 @@
 <div class="body">
     <neutheme theme="light_mode" class="container">
         <div class="header">
-            <neubutton class="step_counter" @button-event="onClickStepCounter">
+            <neubutton class="step-counter" @button-event="onClickStepCounter">
                 <image src="common/images/step_counter.png"></image>
             </neubutton>
             <div class="weather">
                 <image src="{{ weather_icon }}"></image>
             </div>
-            <div class="temperature regular theme_text">
-                <text>{{temperature}}&deg;</text>
+            <div class="temperature regular theme-text">
+                <text>{{ temperature }}&deg;</text>
             </div>
             <neubutton class="notifications" @button-event="onClickNotifications">
                 <image src="common/images/notification.png"></image>
@@ -33,53 +33,53 @@
         </div>
         <div class="clock">
             <div class="hour">
-                <image src="common/images/{{time_h_0}}.png"></image>
-                <image src="common/images/{{time_h_1}}.png"></image>
+                <image src="common/images/{{ time_h_0 }}.png"></image>
+                <image src="common/images/{{ time_h_1 }}.png"></image>
             </div>
             <div class="other">
                 <div class="minutes">
-                    <image src="common/images/{{time_m_0}}.png"></image>
-                    <image src="common/images/{{time_m_1}}.png"></image>
+                    <image src="common/images/{{ time_m_0 }}.png"></image>
+                    <image src="common/images/{{ time_m_1 }}.png"></image>
                 </div>
-                <div class="date bold theme_text">
-                    <text>{{date_w}} {{date_d}}/{{date_m}}</text>
+                <div class="date bold theme-text">
+                    <text>{{ date_w }} {{ date_d }}/{{ date_m }}</text>
                 </div>
             </div>
         </div>
-        <neucard if="{{notifications}}" class="footer">
-            <neubutton class="footer_icon">
+        <neucard if="{{ notifications }}" class="footer">
+            <neubutton class="footer-icon">
                 <image src="common/images/snooze.png"></image>
             </neubutton>
-            <div class="footer_info semi_bold dark_text">
-                <div class="footer_title">
-                    <text>{{notification_title}}</text>
+            <div class="footer-info semi-bold dark-text">
+                <div class="footer-title">
+                    <text>{{ notification_title }}</text>
                 </div>
-                <div class="footer_subject">
-                    <text>{{notification_subject}}</text>
+                <div class="footer-subject">
+                    <text>{{ notification_subject }}</text>
                 </div>
                 <div class="message">
-                    <text>{{notification_message}}</text>
+                    <text>{{ notification_message }}</text>
                 </div>
             </div>
         </neucard>
-        <div else class="footer semi_bold dark_text">
-            <div class="activity">
-                <neubutton class="activity_btn" @button-event="onClickCalories">
+        <div else class="footer semi-bold dark-text">
+            <div class="perform-style">
+                <neubutton class="perform-btn" @button-event="onClickCalories">
                     <image src="common/images/calories.png"></image>
                 </neubutton>
-                <text>{{$t('strings.Calories_Burning')}}</text>
+                <text>{{ $t('strings.Calories_Burning') }}</text>
             </div>
-            <div class="activity">
-                <neubutton class="activity_btn" @button-event="onClickHeartRate">
+            <div class="perform-style">
+                <neubutton class="perform-btn" @button-event="onClickHeartRate">
                     <image src="common/images/heart_rate.png"></image>
                 </neubutton>
-                <text>{{$t('strings.Heart_Rate')}}</text>
+                <text>{{ $t('strings.Heart_Rate') }}</text>
             </div>
-            <div class="activity">
-                <neubutton class="activity_btn" @button-event="onClickSleepTrack">
+            <div class="perform-style">
+                <neubutton class="perform-btn" @button-event="onClickSleepTrack">
                     <image src="common/images/sleep_track.png"></image>
                 </neubutton>
-                <text>{{$t('strings.Sleep_Track')}}</text>
+                <text>{{ $t('strings.Sleep_Track') }}</text>
             </div>
         </div>
         <neubutton class="arrow" @button-event="toggleNotifications">
