@@ -37,7 +37,7 @@ sonarqube {
         property "sonar.projectKey", "applibgroup_Neumorphism_Smart_Watch"
         property "sonar.organization", "applibgroup"
         property "sonar.host.url", "https://sonarcloud.io/"
-        property "sonar.sources", "entry/src"
-        property "sonar.java.binaries", "entry/build"
+        property "sonar.sources", "src"
+        property "sonar.java.binaries", "build"
     }
 }
